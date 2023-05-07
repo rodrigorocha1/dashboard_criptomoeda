@@ -13,6 +13,39 @@ class Crypto:
                  price_change_percentage_1y_in_currency: float, price_change_percentage_24h_in_currency: float, price_change_percentage_30d_in_currency: float,
                  price_change_percentage_7d_in_currency: float
                  ) -> None:
+        """_summary_
+
+        Args:
+            id (str): ID da criptomoeda na API.
+            symbol (str): Símbolo da criptomoeda.
+            name (str): Nome da criptomoeda.
+            image (str): URL da imagem da criptomoeda.
+            current_price (float): Preço atual da criptomoeda.
+            market_cap (float): Capitalização de mercado da criptomoeda.
+            market_cap_rank (int): Ranking da criptomoeda por capitalização de mercado.
+            fully_diluted_valuation (int): Avaliação total da criptomoeda com todas as moedas em circulação.
+            total_volume (int): Volume total da criptomoeda negociado nas últimas 24 horas.
+            high_24h (float): Maior preço da criptomoeda nas últimas 24 horas.
+            low_24h (float): Menor preço da criptomoeda nas últimas 24 horas.
+            price_change_24h (float): Variação de preço da criptomoeda nas últimas 24 horas.
+            price_change_percentage_24h (float): Variação percentual de preço da criptomoeda nas últimas 24 horas.
+            market_cap_change_24h (float): Variação de capitalização de mercado da criptomoeda nas últimas 24 horas.
+            market_cap_change_percentage_24h (float): Variação percentual de capitalização de mercado da criptomoeda nas últimas 24 horas.
+            circulating_supply (float): Quantidade de moedas em circulação.
+            total_supply (float): Quantidade total de moedas emitidas.
+            max_supply (float): Quantidade máxima de moedas que podem ser emitidas.
+            ath (float): Maior preço já atingido pela criptomoeda.
+            ath_change_percentage (float): Variação percentual do preço mais alto já atingido pela criptomoeda.
+            ath_date (datetime.datetime): Data em que a criptomoeda atingiu seu maior preço.
+            roi (object): Dados sobre o retorno sobre o investimento (ROI) da criptomoeda.
+            last_updated (datetime.datetime): Data e hora da última atualização dos dados da criptomoeda.
+            price_change_percentage_1h_in_currency (float): Variação percentual de preço da criptomoeda nas últimas 1 hora em relação a uma moeda específica.
+            price_change_percentage_1y_in_currency (float): Variação percentual de preço da criptomoeda nas últimas 1 ano em relação a uma moeda específica.
+            price_change_percentage_24h_in_currency (float): Variação percentual de preço da criptomoeda nas últimas 24 horas em relação a uma moeda específica.
+            price_change_percentage_30d_in_currency (float): Variação percentual de preço da criptomoeda nas últimas 30 dias em relação a uma moeda específica.
+            price_change_percentage_7d_in_currency (float): Variação percentual de preço da criptomoeda nas últimas 7 dias em relação a uma moeda específica.
+
+        """
         self._id = id
         self._symbol = symbol
         self._name = name
@@ -41,6 +74,7 @@ class Crypto:
         self._price_change_percentage_24h_in_currency = price_change_percentage_24h_in_currency
         self._price_change_percentage_30d_in_currency = price_change_percentage_30d_in_currency
         self._price_change_percentage_7d_in_currency = price_change_percentage_7d_in_currency
+        self
 
     @property
     def id(self):
