@@ -10,7 +10,7 @@ class Crypto:
                  price_change_percentage_1y_in_currency: float, price_change_percentage_24h_in_currency: float, price_change_percentage_30d_in_currency: float,
                  price_change_percentage_7d_in_currency: float
                  ) -> None:
-        """_summary_
+        """Classe que representa uma criptomoeda
 
         Args:
             id (str): ID da criptomoeda na API.
