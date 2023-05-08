@@ -192,3 +192,7 @@ class Crypto:
             transacao (Transacao): Um objeto trancacao
         """
         self._transacoes.append(transacao)
+    
+    @property
+    def listar_transacoes(self):
+        return self._transacoes
