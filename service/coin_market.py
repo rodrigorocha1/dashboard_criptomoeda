@@ -1,5 +1,6 @@
 from service.coingecko_ping import CoinGeckoAPI
 import requests
+from entidades.criptomoeda import Cryptomoeda
 
 
 class CoinMarket:
@@ -19,4 +20,5 @@ class CoinMarket:
         url = f'{self._url}vs_currency=brl&ids={ids}&order=market_cap_desc&price_change_percentage=1h,24h,7d,30d,1y&locale=pt'
         if self._ping.testar_conexao() == 200:
             req = requests.get(url)
-            return req.json()
+            criptomoeda = Cryptomoeda(req.json())
+            return criptomoeda
