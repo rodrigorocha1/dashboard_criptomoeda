@@ -1,8 +1,5 @@
 import datetime
-
-
-import datetime
-
+from entidades.transacoes import Transacao
 
 class Crypto:
     def __init__(self, id: str, symbol: str, name: str, image: str, current_price: float, market_cap: float, market_cap_rank: int,
@@ -74,7 +71,7 @@ class Crypto:
         self._price_change_percentage_24h_in_currency = price_change_percentage_24h_in_currency
         self._price_change_percentage_30d_in_currency = price_change_percentage_30d_in_currency
         self._price_change_percentage_7d_in_currency = price_change_percentage_7d_in_currency
-        self
+        self._transacoes = []
 
     @property
     def id(self):
@@ -187,3 +184,11 @@ class Crypto:
     @property
     def price_change_percentage_7d_in_currency(self):
         return self._price_change_percentage_7d_in_currency
+    
+    def adicionar_trancacoes(self, transacao: Transacao):
+        """Adiciona uma transação
+
+        Args:
+            transacao (Transacao): Um objeto trancacao
+        """
+        self._transacoes.append(transacao)
