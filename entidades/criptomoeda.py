@@ -196,3 +196,4 @@ class Crypto:
     @property
     def listar_transacoes(self):
         return self._transacoes
+    
