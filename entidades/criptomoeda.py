@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, List
 from entidades.transacoes import Transacao
 
 
@@ -165,5 +165,5 @@ class Cryptomoeda:
         self._transacoes.append(transacao)
 
     @property
-    def listar_transacoes(self):
+    def listar_transacoes(self) -> List[Transacao]:
         return self._transacoes

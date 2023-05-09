@@ -23,7 +23,7 @@ class Transacao:
         data = data.strftime(data_str_formato)
         return data
 
-    def __init__(self, preco: float, timestamp: int) -> None:
+    def __init__(self,  timestamp: int, preco: float,) -> None:
         """Construtor da classe 
 
         Args:
@@ -42,3 +42,12 @@ class Transacao:
             str: data e hora Ex: 10-08-2020 20:00:00 
         """
         return self._timestamp
+
+    @property
+    def preco(self) -> str:
+        """retorna o valor sem modificar
+
+        Returns:
+            str: data e hora Ex: 10-08-2020 20:00:00 
+        """
+        return self._preco

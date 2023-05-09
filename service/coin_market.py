@@ -1,6 +1,7 @@
 from service.coingecko_ping import CoinGeckoAPI
 import requests
 from entidades.criptomoeda import Cryptomoeda
+from service.transacao_service import TransacaoService
 
 
 class CoinMarket:
@@ -21,4 +22,6 @@ class CoinMarket:
         if self._ping.testar_conexao() == 200:
             req = requests.get(url)
             criptomoeda = Cryptomoeda(req.json())
+            # ts = TransacaoService()
+            # criptomoeda.adicionar_trancacoes(ts.)
             return criptomoeda
