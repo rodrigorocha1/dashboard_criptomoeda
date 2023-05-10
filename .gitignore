@@ -1,2 +1,11 @@
 /.venv
 /.vscode
+entidades/__pycache__/__init__.cpython-38.pyc
+entidades/__pycache__/criptomoeda.cpython-38.pyc
+entidades/__pycache__/transacoes.cpython-38.pyc
+notebook/teste.ipynb
+service/__pycache__/coin_market.cpython-38.pyc
+service/__pycache__/coingecko_ping.cpython-38.pyc
+service/__pycache__/transacao_service.cpython-38.pyc
+utils/validardor_json.py
+utils/__pycache__/validardor_json.cpython-38.pyc
