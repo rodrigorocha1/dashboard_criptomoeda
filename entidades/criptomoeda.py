@@ -1,5 +1,6 @@
 from typing import Dict, List
 from entidades.transacoes import Transacao
+from entidades.ohlc import OHLC
 
 
 class Cryptomoeda:
@@ -43,6 +44,7 @@ class Cryptomoeda:
         self._price_change_percentage_7d_in_currency = json[
             0]['price_change_percentage_7d_in_currency']
         self._transacoes = []
+        self._ohlc = []
 
     @property
     def id_cripto(self):
@@ -167,3 +169,18 @@ class Cryptomoeda:
     @property
     def listar_transacoes(self) -> List[Transacao]:
         return self._transacoes
+
+    def adicionar_ohlc(self, timestamp: int, open_hc: float, hight: float, low: float, close: float) -> List[OHLC]:
+        self._ohlc.append(
+            OHLC(
+                timestamp=timestamp,
+                open_hc=open_hc,
+                hight=hight,
+                low=low,
+                close=close
+            )
+        )
+
+    @property
+    def mostrar_ohlc(self):
+        return self._ohlc
