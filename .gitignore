@@ -9,3 +9,4 @@ service/__pycache__/coingecko_ping.cpython-38.pyc
 service/__pycache__/transacao_service.cpython-38.pyc
 utils/validardor_json.py
 utils/__pycache__/validardor_json.cpython-38.pyc
+teste.py
