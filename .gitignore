@@ -10,3 +10,6 @@ service/__pycache__/transacao_service.cpython-38.pyc
 utils/validardor_json.py
 utils/__pycache__/validardor_json.cpython-38.pyc
 teste.py
+entidades/__pycache__/ohlc.cpython-38.pyc
+service/__pycache__/ohlc_service.cpython-38.pyc
+service/__pycache__/ohlc.cpython-38.pyc
