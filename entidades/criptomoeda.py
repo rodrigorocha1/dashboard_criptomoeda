@@ -182,5 +182,5 @@ class Cryptomoeda:
         )
 
     @property
-    def mostrar_ohlc(self):
+    def mostrar_ohlc(self) -> List[OHLC]:
         return self._ohlc
