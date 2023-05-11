@@ -3,6 +3,7 @@ from service.coingecko_ping import CoinGeckoAPI
 import requests
 from entidades.criptomoeda import Cryptomoeda
 from service.transacao_service import TransacaoService
+from service.ohlc_service import OHLCService
 
 
 class CoinMarket:
@@ -32,4 +33,12 @@ class CoinMarket:
             for transacao in transacoes:
                 criptomoeda.adicionar_trancacoes(
                     Transacao(timestamp=transacao[0], preco=transacao[1]))
+
+            if ids in [1, 7, 14, 30, 90, 180, 365]:
+                ohlc_service = OHLCService()
+                ohlcs = ohlc_service.obter_ohlc(ids, 1)
+                for ohlc in ohlcs:
+                    criptomoeda.adicionar_ohlc(
+                        ohlc[0], ohlc[1], ohlc[2], ohlc[3], ohlc[4]
+                    )
             return criptomoeda
