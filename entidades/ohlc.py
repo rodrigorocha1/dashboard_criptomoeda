@@ -31,15 +31,15 @@ class OHLC:
             close (float): preço fechamento
         """
 
-        self._timestamp = self._converter_timestamp(timestamp)
+        self._data_hora = self._converter_timestamp(timestamp)
         self._open = open_hc
         self._high = hight
         self._low = low
         self._close = close
 
     @property
-    def timestamp(self):
-        return self._timestamp
+    def data_hora(self):
+        return self._data_hora
 
     @property
     def open(self):
