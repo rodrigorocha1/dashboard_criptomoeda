@@ -1,6 +1,5 @@
 from service.coingecko_ping import CoinGeckoAPI
 import requests
-from entidades.ohlc import OHLC
 
 
 class OHLCService:
