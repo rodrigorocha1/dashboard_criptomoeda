@@ -11,7 +11,7 @@ class CoinMarket:
         self._ping = CoinGeckoAPI()
         self._url = 'https://api.coingecko.com/api/v3/coins/markets?'
 
-    def obter_mercado(self, ids: str, days: str, intervalo: str):
+    def obter_mercado(self, ids: str, days: str, intervalo: str = None):
         """Método para obter o mercado da criptomoeda
 
         Args:
