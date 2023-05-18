@@ -34,7 +34,7 @@ class CoinMarket:
                 criptomoeda.adicionar_trancacoes(
                     Transacao(timestamp=transacao[0], preco=transacao[1]))
 
-            if days in [1, 7, 14, 30, 90, 180, 365]:
+            if days in ['1', '7', '14', '30', '90', '180', '365']:
                 ohlc_service = OHLCService()
                 ohlcs = ohlc_service.obter_ohlc(ids, days)
                 for ohlc in ohlcs:
